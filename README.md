@@ -102,3 +102,32 @@ app.delete('/api/delete/:id',(req,res)=>{
     });         
 });
 //url using DELDETE methood --> localhost:3000/api/delete/9 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//update job name 
+//in postman using PUT methood localhost:3000/api/updateJobName/2
+app.put('/api/updateJobName/:id',(req,res)=>{
+        console.log(req.params.id);
+        // sql query 
+        let sql = `UPDATE jobs SET 
+                    jname = '${req.body.jname}'
+                    WHERE id = '${req.body.id}'
+                    `;
+        // run query 
+        db.query(sql,(err,result)=>{
+                if(err) throw err;
+                res.send('data updated');
+        })            
+})
