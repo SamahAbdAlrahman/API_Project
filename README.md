@@ -65,4 +65,7 @@ app.get('/api/read',(req,res)=>{
     });
 })
 // in postman using GET methood localhost:3000/api/read
- 
+ and data returned as shown 
+ [{"id":1,"jname":"Software Engineer","jaddress":"Nablus ","jsalary":"$123 - $456"},{"id":2,"jname":"markting","jaddress":"salfet","jsalary":"1000$"},
+ {"id":3,"jname":"hardware eng","jaddress":"qlqeleah","jsalary":"20000"},
+  {"id":9,"jname":"marketing","jaddress":"borkan","jsalary":"300$-500$"}]
