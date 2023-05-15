@@ -1,4 +1,8 @@
 # API_Project
+// we using Node.js MySql REST API
+//we using Postman - XAMPP - visual studio code
+
+
 // this code to connection with mysql database  
 var db = mysql.createConnection({
     host:'localhost',
