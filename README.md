@@ -131,3 +131,31 @@ app.put('/api/updateJobName/:id',(req,res)=>{
                 res.send('data updated');
         })            
 })
+//update address 
+app.put('/api/updateJobAddress/:id',(req,res)=>{
+    console.log(req.params.id);
+    // sql query 
+    let sql = `UPDATE jobs SET 
+                jaddress = '${req.body.jaddress}'
+                WHERE id = '${req.body.id}'
+                `;
+    // run query 
+    db.query(sql,(err,result)=>{
+            if(err) throw err;
+            res.send('data updated');
+    })            
+})
+//update salary
+app.put('/api/updateJobSalary/:id',(req,res)=>{
+    console.log(req.params.id);
+    // sql query 
+    let sql = `UPDATE jobs SET 
+    jsalary = '${req.body.jsalary}'
+                WHERE id = '${req.body.id}'
+                `;
+    // run query 
+    db.query(sql,(err,result)=>{
+            if(err) throw err;
+            res.send('data updated');
+    })            
+})
