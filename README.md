@@ -73,3 +73,19 @@ app.get('/api/read',(req,res)=>{
  [{"id":1,"jname":"Software Engineer","jaddress":"Nablus ","jsalary":"$123 - $456"},{"id":2,"jname":"markting","jaddress":"salfet","jsalary":"1000$"},
  {"id":3,"jname":"hardware eng","jaddress":"qlqeleah","jsalary":"20000"},
   {"id":9,"jname":"marketing","jaddress":"borkan","jsalary":"300$-500$"}]
+  
+  // search with id 
+app.get('/api/read/:id',(req,res)=>{
+    console.log(req.params.id);
+    // sql query 
+    let sql = `SELECT * FROM jobs
+                WHERE id = '${req.params.id}'
+                `;
+    // run query 
+    db.query(sql,(err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    });   
+    });
+//    url request using GET methood : localhost:3000/api/read/6
+//response in postman:[{"id":6,"jname":"sm","jaddress":"","jsalary":""}]
