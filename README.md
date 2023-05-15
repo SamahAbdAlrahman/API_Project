@@ -89,3 +89,16 @@ app.get('/api/read/:id',(req,res)=>{
     });
 //    url request using GET methood : localhost:3000/api/read/6
 //response in postman:[{"id":6,"jname":"sm","jaddress":"","jsalary":""}]
+
+
+  // // delete job with id  
+app.delete('/api/delete/:id',(req,res)=>{
+    let sql = `DELETE FROM jobs 
+                WHERE id = '${req.params.id}'
+                `;
+    db.query(sql,(err,result)=>{
+        if(err) throw err;
+        res.send('data deleted');
+    });         
+});
+//url using DELDETE methood --> localhost:3000/api/delete/9 
