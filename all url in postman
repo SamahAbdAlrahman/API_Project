@@ -1,0 +1,26 @@
+localhost:3000/api/createManagerAcount    
+localhost:3000/api/loginManager               
+localhost:3000/api/logoutManager              
+******************************************************************************************************************
+if manager logged  in ,then he can View Applicant and change in jobs data (add,update,delete)
+localhost:3000/api/ViewApplicants            
+localhost:3000/api/addjob                         
+localhost:3000/api/deleteJob/:id                     
+localhost:3000/api/updateJob/id                     
+localhost:3000/api/updateJobName/id         
+localhost:3000/api/updateJobAddress/id         
+localhost:3000/api/updateJobSalary/id                 
+******************************************************************************************************************
+localhost:3000/api/search/ViewAllJobs                      
+localhost:3000/api/search/searchID/:id                   
+localhost:3000/api/search/searchjname/:name          //write complete job name 
+localhost:3000/api/search/searchJob/:letter              //It is not necessary to write the full name
+localhost:3000/api/search/searchByaddress/:letter     //It is not necessary to write the address
+localhost:3000/api/searchsearchSalaryRange/:salary   //It will show all the jobs that are within the range
+******************************************************************************************************************
+localhost:3000/api/Apply/applications/:job_id
+localhost:3000/api/Apply/deleteApplications/:fullname/:job_id
+localhost:3000/api/Apply/updateApplications/:fullname/:job_id
+localhost:3000/api/searchApplication/:fullname/:job_id
+localhost:3000/api/searchHistory/:fullname
+
